@@ -1,7 +1,38 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
+  env: {
+    LOCALE: "NEXT_LOCALE",
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "localhost",
+        port: "7036",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "localhost",
+        port: "7036",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "https://apiwebsite.rakiza-sa.com",
+        pathname: "/**",
+      },
+    ],
+    unoptimized: process.env.NODE_ENV === "development",
+  },
+  webpack: (config, { isServer }) => {
+    config.cache = false;
+    return config;
+  },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

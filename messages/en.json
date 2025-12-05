@@ -1,0 +1,402 @@
+{
+    "app": {
+        "welcome": "Welcome to Azzanco",
+        "name":"Azzanco",
+        "description":"An online platform for buying and renting light and heavy machinery and equipment easily via the internet through search and filtering to get what you want easily, anytime and anywhere."
+
+    },
+    "titles": {
+        "home": "Home",
+        "contactUs": "Contact Us",
+        "followUs":"Follow Us",
+        "subscribe":"Subscribe to our newsletter",
+        "login":"Login",
+        "forgotPassword":"Forgot Password",
+        "verifyCode":"Verify Code",
+        "resetPassword":"Reset Password",
+        "myAccount":"My Account",
+        "profile":"Profile",
+        "activity":"Activity",
+        "contacts":"Contact numbers",
+        "socialMedia":"Social Media",
+        "settings":"Settings",
+        "globalSettings":"Global settings",
+        "securitySettings":"Security settings",
+        "emailSettings":"Email Settings",
+        "passwordRequirements":"Password Requirements",
+        "sectionsAndServices":"Sections and Services",
+        "addSection":"Add Section",
+        "addService":"Add Service",
+        "editSection":"Edit Section",
+        "editService":"Edit Service",
+        "addServiceItem":"Add Service Item",
+        "editServiceItem":"Edit Service Item",
+        "soon":"Soon",
+        "servicesCount":"Services Count",
+        "itemsCount":"Items Count",
+        "contactsCount":"Contacts Count",
+        "socialMediasCount":"Social Medias Count",
+        "lastFiveServices":"Last five services",
+        "lastFiveServiceItems":"Last five service items",
+        "goodMorning":"Good morning",
+        "goodEvening":"Good evening"
+    },
+    "paragraphs":{
+        "appDescription":"Looking for heavy equipment that's ready to work without any headaches? The problem is that there are so many options, and it's exhausting. The solution? Azzamco... selling and renting reliable equipment for any project. Hundreds of customers have tried us and spoken their minds. Order now and get ready to go!",
+        "copyRights":"All rights reserved by",
+        "verifyOtpCode":"Enter the 4-digit code sent to you",
+        "settings":"Configure your application settings and preferences",
+        "globalSettings":"Basic application configuration",
+        "securitySettings":"Configure authentication and security options",
+        "emailSettings":"Configure SMTP settings for email notifications",
+        "sectionsAndServices":"Manage your sections and services",
+        "noSections":"No sections found",
+        "noServices":"No services found",
+        "noServicesFound":"There are no services in this section.",
+        "noContacts":"No contacts found",
+        "contacts":"Contact numbers for website",
+        "socialMedia":"Social media for website",
+        "noSocialMedia":"No social media found",
+        "loading":"Loading"
+        },
+    "labels":{
+        "email":"Email",
+        "password":"Password",
+        "confirmPassword":"Confirm Password",
+        "name":"Name",
+        "phone":"Phone",
+        "address":"Address",
+        "forgotPassword":"Forgot Password?",
+        "verifyOtpCode":"OTP Code",
+        "newPassword":"New Password",
+        "role":"Role",
+        "isSuperUser":"Is super user",
+        "createdAt":"Created At",
+        "updatedAt":"Updated At",
+        "lastLogin":"Last Login",
+        "lastLogout":"Last Logout",
+        "fullName":"Full name",
+        "isPrimary":"Primary",
+        "actions":"Actions",
+        "unactive":"Unactive",
+        "iconFile":"Icon",
+        "icon":"Icon",
+        "displayOrder":"Display Order",
+        "appName":"App Name",
+        "arSummary":"Arabic summary",
+        "enSummary":"English summary",
+        "otpExpiry":"OTP Expiry (Minutes)",
+        "maxLoginAttempts":"Max Login Attempts",
+        "minPasswordLength":"Min Password Length",
+        "passwordRequireDigits":"Require digits",
+        "passwordRequireLowercase":"Require lowercase",
+        "passwordRequireUppercase":"Require uppercase",
+        "passwordRequireNonAlphanumeric":"Require non-alphanumeric",
+        "host":"Host",
+        "port":"Port",
+        "useSsl":"Use SSL",
+        "inactive":"Inactive",
+        "active":"Active",
+        "posterFile":"Poster File",
+        "posterUrl":"Poster URL",
+        "videoUrl":"Video URL",
+        "imageUrl":"Image URL",
+        "imageFile":"Image File",
+        "videoFile":"Video File",
+        "thumbnailFile":"Thumbnail File",
+        "thumbnailUrl":"Thumbnail",
+        "parentService":"Parent Service",
+        "parentSection":"Parent Section",
+        "price":"Price",
+        "isAvailable":"Is Available",
+        "isNewArrival":"Is New Arrival",
+        "enDescription":"English description",
+        "arDescription":"Arabic description",
+        "enTitle":"English title",
+        "arTitle":"Arabic title",
+        "enSubTitle":"English subtitle",
+        "arSubTitle":"Arabic subtitle",
+        "arValue":"Arabic value",
+        "enValue":"English value",
+        "singleValue":"Single value",
+        "attributes":"Attributes",
+        "attributeId":"Attribute Id",
+        "mobileNumber":"Mobile Number",
+        "currentPassword":"Current Password"
+    },
+    "placeholders":{
+        "flexableSearch":"Search for any section or item here...",
+        "subscribeEmail":"Enter your email to subscribe",
+        "email":"Enter your email",
+        "password":"Enter your password",
+        "confirmPassword":"Confirm your password",
+        "name":"Enter your name",
+        "phone":"Enter your phone",
+        "address":"Enter your address",
+        "newPassword":"Enter your new password",
+        "isPrimary":"Will be considered the main contact number",
+        "unactive":"Will be considered inactive",
+        "iconFile":"Select icon file",
+        "displayOrder":"Enter display order",
+        "appName":"Enter app name",
+        "arSummary":"Enter Arabic summary",
+        "enSummary":"Enter English summary",
+        "passwordRequireDigits":"Enter require digits",
+        "passwordRequireLowercase":"Enter require lowercase",
+        "passwordRequireUppercase":"Enter require uppercase",
+        "passwordRequireNonAlphanumeric":"Enter require non-alphanumeric",
+        "host":"Enter host",
+        "port":"Enter port",
+        "useSsl":"Enter use SSL",
+        "searchSectionOrService":"Search for a department or service...",
+        "posterFile":"Select poster file",
+        "posterUrl":"Select poster URL",
+        "videoUrl":"Select video URL",
+        "imageUrl":"Select image URL",
+        "imageFile":"Select image file",
+        "videoFile":"Select video file",
+        "thumbnailFile":"Select thumbnail file",
+        "thumbnailUrl":"Select thumbnail",
+        "noOptions":"No data",
+        "parentService":"Select parent service",
+        "parentSection":"Select parent section",
+        "noData":"No Data",
+        "noDescription":"No description",
+        "searchServiceItem":"Search for a service item...",
+        "isAvailable":"Is item available",
+        "isNewArrival":"Is item new arrival",
+        "enDescription":"Enter English description",
+        "arDescription":"Enter Arabic description",
+        "enTitle":"Enter English title",
+        "arTitle":"Enter Arabic title",
+        "enSubTitle":"Enter Sub title English subtitle",
+        "arSubTitle":"Enter Sub title Arabic subtitle",
+        "arName":"Enter Arabic name",
+        "enName":"Enter English name",
+        "arValue":"Enter Arabic value",
+        "enValue":"Enter English value",
+        "singleValue":"Enter single value",
+        "value":"Enter value",
+        "noAttributes":"No attributes",
+        "searchContacts":"Search for a contact...",
+        "searchSocialMedia":"Search for a social media...",
+        "noSocialMedia":"No social medias",
+        "mobileNumber":"Enter mobile number",
+        "currentPassword":"Enter current password",
+        "fullName":"Enter full name"
+
+    },
+    "pages":{
+        "dashboard":"Dashboard",
+        "contactUs":"Contact Us",
+        "socialMedia":"Social Media",
+        "settings":"Settings",
+        "profile":"Profile",
+        "sections":"Sections",
+        "services":"Services",
+        "items":"Items",
+        "news":"News"
+    },
+    "buttons": {
+        "subscribe":"Subscribe",
+        "signIn":"Sign In",
+        "signUp":"Sign Up",
+        "backToHome":"Back To Home",
+        "backToLogin":"Back To Login",
+        "signOut":"Sign Out",
+        "continue":"Continue",
+        "next":"Next",
+        "previous":"Previous",
+        "done":"Done",
+        "back":"Back",
+        "verify":"Verify",
+        "submit":"Submit",
+        "edit":"Edit",
+        "delete":"Delete",
+        "cancel":"Cancel",
+        "add":"Add",
+        "save":"Save",
+        "update":"Update",
+        "saving":"Saving...",
+        "saveChanges":"Save Changes",
+        "addService":"Add Service",
+        "editService":"Edit Service",
+        "deleteService":"Delete Service",
+        "deleteSection":"Delete Section",
+        "editSection":"Edit Section",
+        "viewDetails":"View Details",
+        "addAttribute":"Add Attribute",
+        "editAttribute":"Edit Attribute",
+        "deleteAttribute":"Delete Attribute",
+        "viewAttribute":"View Attribute"
+    },
+    "validations": {
+        "email": {
+            "required": "Email is required!",
+            "invalid": "Invalid email address!"
+        },
+        "password": {
+            "required": "Password is required!",
+            "min": "Password must be at least {min} characters!",
+            "max": "Password must be less than {max} characters!"
+        },
+        "newPassword": {
+            "required": "Password is required!",
+            "min": "Password must be at least {min} characters!",
+            "max": "Password must be less than {max} characters!"
+        },
+        "otp": {
+            "required": "OTP is required!",
+            "length": "OTP must be 4 digits!"
+        },
+        "phoneNumber": {
+            "required": "Phone number is required!",
+            "invalid": "Invalid phone number!"
+        },
+        "iconFile": {
+            "required": "Icon file is required!",
+            "invalid": "Invalid icon file!"
+        },
+        "name": {
+            "required": "Name is required!",
+            "min": "Name must be at least {min} characters!",
+            "max": "Name must be less than {max} characters!"
+        },
+        "displayOrder": {
+            "required": "Display order is required!",
+            "min": "Display order must be at least {min} characters!",
+            "max": "Display order must be less than {max} characters!"
+        },
+        "host": {
+            "required": "Host is required!",
+            "min": "Host must be at least {min} characters!",
+            "max": "Host must be less than {max} characters!"
+        },
+        "port": {
+            "required": "Port is required!",
+            "min": "Port must be at least {min} characters!",
+            "max": "Port must be less than {max} characters!"
+        },
+        "useSsl": {
+            "required": "Use SSL is required!",
+            "min": "Use SSL must be at least {min} characters!",
+            "max": "Use SSL must be less than {max} characters!"
+        },
+        "applicationName": {
+            "required": "Application name is required!",
+            "min": "Application name must be at least {min} characters!",
+            "max": "Application name must be less than {max} characters!"
+        },
+        "enTitle": {
+            "required": "Title is required!",
+            "min": "Title must be at least {min} characters!",
+            "max": "Title must be less than {max} characters!"
+        },
+        "arTitle": {
+            "required": "Title is required!",
+            "min": "Title must be at least {min} characters!",
+            "max": "Title must be less than {max} characters!"
+        },
+        "enDescription": {
+            "required": "Description is required!",
+            "min": "Description must be at least {min} characters!",
+            "max": "Description must be less than {max} characters!"
+        },
+        "arDescription": {
+            "required": "Description is required!",
+            "min": "Description must be at least {min} characters!",
+            "max": "Description must be less than {max} characters!"
+        },
+        "enContent": {
+            "required": "Content is required!",
+            "min": "Content must be at least {min} characters!",
+            "max": "Content must be less than {max} characters!"
+        },
+        "arContent": {
+            "required": "Content is required!",
+            "min": "Content must be at least {min} characters!",
+            "max": "Content must be less than {max} characters!"
+        },
+        "sectionId": {
+            "required": "Section is required!",
+            "min": "Section must be at least {min} characters!",
+            "max": "Section must be less than {max} characters!"
+        },
+        "serviceId":{
+            "required": "Service is required!",
+            "min": "Service must be at least {min} characters!",
+            "max": "Service must be less than {max} characters!"
+        },
+        "arName":{
+            "required": "Arabic Name is required!"
+        },
+        "enName":{
+            "required": "English Name is required!"
+        },
+        "value":{
+            "required": "Value is required!"
+        },
+        "arValue":{
+            "required": "Arabic Value is required!"
+        },
+        "enValue":{
+            "required": "English Value is required!"
+        },
+        "mobileNumber":{
+            "required": "Mobile Number is required!",
+            "min": "Mobile Number must be at least {min} characters!",
+            "max": "Mobile Number must be less than {max} characters!",
+            "pattern": "Mobile Number must be a valid number!"
+        },
+        "currentPassword":{
+            "required": "Current Password is required!",
+            "min": "Current Password must be at least {min} characters!",
+            "max": "Current Password must be less than {max} characters!",
+            "pattern": "Current Password must be a valid password!"
+        }
+    },
+        "dialogs": {
+        "logout": {
+            "title": "Sign Out",
+            "description": "Are you sure you want to sign out?",
+            "confirm": "Yes, sign out",
+            "cancel": "Cancel"
+        },
+        "delete": {
+            "title": "Delete",
+            "description": "Are you sure you want to delete this?",
+            "confirm": "Yes, delete",
+            "cancel": "Cancel"
+        },
+        "addContact": {
+            "title": "Add Contact",
+            "description": "Add new contact",
+            "confirm": "Yes, add",
+            "cancel": "Cancel"
+        },
+        "updateContact": {
+            "title": "Update Contact",
+            "description": "Update contact",
+            "confirm": "Yes, update",
+            "cancel": "Cancel"
+        },
+        "addSocialMedia": {
+            "title": "Add Social Media",
+            "description": "Add new social media",
+            "confirm": "Yes, add",
+            "cancel": "Cancel"
+        },
+        "updateSocialMedia": {
+            "title": "Update Social Media",
+            "description": "Update social media",
+            "confirm": "Yes, update",
+            "cancel": "Cancel"
+        },
+        "deleteSection": {
+            "title": "Delete",
+            "description": "Are you sure you want to delete this?",
+            "confirm": "Yes, delete",
+            "cancel": "Cancel"
+        }
+    }
+}

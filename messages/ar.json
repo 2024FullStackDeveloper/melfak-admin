@@ -1,0 +1,403 @@
+{
+    "app":{
+         "welcome":"مرحبا بك في عزانكو",
+         "name":"عزانكو",
+         "description":"منصة الكترونية لشراء واستاجار الالات والمعدات الخفيفة والثقيلة بسهولة عبر الانترنت من خلال البحث والفلترة تصل الى ماتريد بكل سهولة وفي اي وقت ومن اي مكان"
+     },
+     "titles":{
+         "home":"الصفحة الرئيسية",
+         "contactUs":"تواصل معنا",
+         "followUs":"تابعنا",
+         "subscribe":"اشترك في نشرتنا البريدية",
+         "login":"تسجيل الدخول",
+         "forgotPassword":"نسيت كلمه المرور؟",
+         "verifyCode":"تأكيد الكود",
+         "resetPassword":"تغيير كلمه المرور",
+         "myAccount":"حسابي",
+         "profile":"الملف الشخصي",
+         "activity":"النشاطات",
+         "contacts":"ارقام التواصل",
+         "socialMedia":"التواصل الاجتماعي",
+         "settings":"الاعدادات",
+         "globalSettings":"الاعدادات العامة",
+         "securitySettings":"إعدادات الأمان",
+         "emailSettings":"إعدادات البريد الالكتروني",
+         "passwordRequirements":"متطلبات كلمه المرور",
+         "sectionsAndServices":"الاقسام والخدمات",
+         "addSection":"اضافة قسم",
+         "addService":"اضافة خدمة",
+         "editSection":"تعديل قسم",
+         "editService":"تعديل خدمة",
+         "addServiceItem":"اضافة عنصر",
+         "editServiceItem":"تعديل عنصر",
+         "soon":"قريباً",
+         "servicesCount":"عدد الخدمات",
+         "itemsCount":"عدد العناصر",
+         "contactsCount":"عدد الارقام",
+         "socialMediasCount":"عدد وسائل التواصل الاجتماعي",
+         "lastFiveServices":"اخر 5 خدمات",
+         "lastFiveServiceItems":"اخر 5 عناصر",
+         "goodMorning":"صباح الخير",
+         "goodEvening":"مساء الخير"
+     },
+     "paragraphs":{
+         "appDescription":"تبحث على معدات ثقيلة جاهزة للشغل بدون صداع؟ المشكلة إن الخيارات كثيرة ومتعبة. الحل؟ عزامكو… بيع وتأجير معدات موثوقة لأي مشروع. مئات العملاء جرّبونا وقالوا كلمتهم. اطلب الآن وخلك جاهز للانطلاق!",
+         "verifyOtpCode":"ادخل الكود المرسل المكون من 4 ارقام",
+         "settings":"تكوين إعدادات التطبيق وتفضيلاته",
+         "globalSettings":"التكوين الأساسي للتطبيق",
+         "securitySettings":"تكوين خيارات المصادقة والأمان",
+         "emailSettings":"تكوين إعدادات SMTP لإشعارات البريد الإلكتروني",
+         "sectionsAndServices":"إدارة أقسامك وخدماتك",
+         "noSections":"لا يوجد أقسام",
+         "noServices":"لا يوجد خدمات",
+         "noServicesFound":"لا يوجد خدمات في هذه القسم",
+         "noContacts":"لا يوجد ارقام تواصل",
+         "contacts":"ارقام التواصل الخاصة بالموقع",
+         "socialMedia":"وسائل التواصل الاجتماعي الخاصة بالموقع",
+         "noSocialMedia":"لا يوجد وسائل التواصل الاجتماعي",
+         "loading":"جاري التحميل",
+         "copyRights":"جميع الحقوق محفوظة لدى موقع"
+
+     },
+     "labels":{
+         "email":"البريد الالكتروني",
+         "password":"كلمه المرور",
+         "confirmPassword":"تاكيد كلمه المرور",
+         "name":"الاسم",
+         "phone":"الهاتف",
+         "address":"العنوان",
+         "forgotPassword":"نسيت كلمه المرور؟",
+         "verifyOtpCode":"كود التحقق",
+         "newPassword":"كلمه المرور الجديدة",
+         "role":"الدور",
+         "isSuperUser":"هل هو مستخدم اساسي",
+         "createdAt":"تاريخ الاضافة",
+         "updatedAt":"تاريخ التحديث",
+         "lastLogin":"تاريخ آخر تسجيل دخول",
+         "lastLogout":"تاريخ آخر تسجيل خروج",
+         "fullName":"الاسم الكامل",
+         "isPrimary":"رقم رئيسي",
+         "actions":"الإجراءات",
+         "unactive":"غير نشط",
+         "iconFile":"الايقونة",
+         "icon":"الايقونة",
+         "displayOrder":"ترتيب العرض",
+         "appName":"اسم التطبيق",
+         "arSummary":"الملخص بالعربي",
+         "enSummary":"الملخص بالانجليزي",
+         "otpExpiry":"مدة رمز التحقق (دقائق)",
+         "maxLoginAttempts":"عدد المحاولات المسموح بها",
+         "minPasswordLength":"اقل طول لكلمة المرور",
+         "passwordRequireDigits":"تطلب ارقام",
+         "passwordRequireLowercase":"تطلب احرف صغيرة",
+         "passwordRequireUppercase":"تطلب احرف كبيرة",
+         "passwordRequireNonAlphanumeric":"تطلب احرف غير حروف",
+         "host":"المضيف",
+         "port":"المنفذ",
+         "useSsl":"هل تم تفعيل SSL",
+         "inactive":"غير نشط",
+         "active":"نشط",
+         "thumbnail":"الصورة المصغرة",
+         "arTitle":"العنوان بالعربي",
+         "enTitle":"العنوان بالانجليزي",
+         "arSubTitle":"العنوان الفرعي بالعربي",
+         "enSubTitle":"العنوان الفرعي بالانجليزي",
+         "arDescription":"الوصف بالعربي",
+         "enDescription":"الوصف بالانجليزي",
+         "posterFile":"صورة الفيديو",
+         "posterUrl":"صورة الفديو",
+         "videoUrl":"رابط الفيديو",
+         "imageUrl":"الصورة",
+         "imageFile":"الصورة",
+         "videoFile":"فيديو",
+         "thumbnailFile":"الصورة المصغرة",
+         "thumbnailUrl":"الصورة المصغرة",
+         "parentService":"الخدمة الرئيسية",
+         "parentSection":"القسم الرئيسي",
+         "price":"السعر",
+         "isAvailable":"متاح",
+         "isNewArrival":"جديد",
+         "arName":"الاسم بالعربي",
+         "enName":"الاسم بالانجليزي",
+         "arValue":"القيمة بالعربي",
+         "enValue":"القيمة بالانجليزي",
+         "singleValue":"القيمة الفردية",
+         "value":"القيمة",
+         "order":"ترتيب العرض",
+         "attributes":"الخصائص",
+         "attributeId":"الخاصية",
+         "mobileNumber":"رقم الموبايل",
+         "currentPassword":"كلمة المرور الحالية"
+         },
+     "placeholders":{
+         "flexableSearch":"إبحث عن اي قسم او عنصر من هنا ...",
+         "subscribeEmail":"ادخل بريدك الالكتروني للاشتراك",
+         "email":"ادخل بريدك الالكتروني",
+         "password":"ادخل كلمه المرور",
+         "confirmPassword":"ادخل تاكيد كلمه المرور",
+         "name":"ادخل الاسم",
+         "phone":"ادخل الهاتف",
+         "address":"ادخل العنوان",
+         "newPassword":"ادخل كلمه المرور الجديدة",
+         "isPrimary":"سيتم اعتبارة الرقم الرئيسي للاتصال",
+         "unactive":"سيتم اعتبارة الرقم غير نشط",
+         "iconFile":"اختر الصورة",
+         "displayOrder":"ادخل ترتيب العرض",
+         "appName":"ادخل اسم التطبيق",
+         "arSummary":"ادخل الفحص بالعربي",
+         "enSummary":"ادخل الفحص بالانجليزي",
+         "passwordRequireDigits":"اقل طول لكلمة المرور المسموح بها",
+         "passwordRequireLowercase":"تتضمن احرف صغيرة",
+         "passwordRequireUppercase":"تتضمن احرف كبيرة",
+         "passwordRequireNonAlphanumeric":"تتضمن احرف غير حروف",
+         "host":"ادخل Host",
+         "port":"ادخل Port",
+         "useSsl":"هل تم تفعيل SSL للبريد الالكتروني المرسل",
+         "searchSectionOrService":"بحث عن قسم او خدمة ...",
+         "arTitle":"ادخل العنوان بالعربي",
+         "enTitle":"ادخل العنوان بالانجليزي",
+         "arSubTitle":"ادخل العنوان الفرعي بالعربي",
+         "enSubTitle":"ادخل العنوان الفرعي بالانجليزي",
+         "arDescription":"ادخل الوصف بالعربي",
+         "enDescription":"ادخل الوصف بالانجليزي",
+         "posterFile":"اختر الصورة",
+         "posterUrl":"اختر الصورة",
+         "videoUrl":"اختر الفيديو",
+         "imageUrl":"اختر الصورة",
+         "imageFile":"اختر الصورة",
+         "videoFile":"اختر الفيديو",
+         "thumbnailFile":"اختر الصورة",
+         "thumbnailUrl":"اختر الصورة",
+         "parentService":"اختر الخدمة الرئيسية",
+         "parentSection":"اختر القسم الرئيسي",
+         "noOptions":"لا توجد بيانات",
+         "noData":"لا توجد بيانات",
+         "noDescription":"لا توجد وصف",
+         "searchServiceItem":"بحث عن عنصر خدمة ...",
+         "isAvailable":"هل العنصر متاح",
+         "isNewArrival":"هل العنصر جديد",
+         "arName":"الاسم بالعربي",
+         "enName":"الاسم بالانجليزي",
+         "arValue":"القيمة بالعربي",
+         "enValue":"القيمة بالانجليزي",
+         "singleValue":"القيمة الفردية",
+         "value":"القيمة",
+         "noAttributes":"لا توجد خصائص",
+         "searchContacts":"بحث عن رقم تواصل ...",
+         "searchSocialMedia":"بحث عن وسيلة التواصل ...",
+         "noSocialMedia":"لا توجد وسائل التواصل الاجتماعي",
+         "currentPassword":"كلمة المرور الحالية",
+         "fullName":"الاسم بالكامل",
+         "mobileNumber":"رقم الجوال"
+     }, 
+     "pages":{
+         "dashboard":"الرئيسية",
+         "contactUs":"تواصل معنا",
+         "socialMedia":"وسائل التواصل الاجتماعي",
+         "settings":"الاعدادات",
+         "profile":"الملف الشخصي",
+         "sections":"الاقسام",
+         "services":"الخدمات",
+         "items":"العناصر",
+         "news":"الاخبار"
+     },
+     "buttons": {
+         "subscribe":"اشترك",
+         "signIn":"دخول",
+         "signUp":"تسجيل جديد",
+         "backToHome":"العودة للرئيسية",
+         "backToLogin":"العودة للدخول",
+         "signOut":"تسجيل الخروج",
+         "continue":"التالي",
+         "next":"التالي",
+         "previous":"السابق",
+         "done":"تم",
+         "back":"العودة",
+         "verify":"تحقق",
+         "submit":"ارسال",
+         "edit":"تعديل",
+         "delete":"حذف",
+         "cancel":"إلغاء",
+         "add":"إضافة",
+         "save":"حفظ",
+         "update":"تعديل",
+         "saving":"جار الحفظ ...",
+         "saveChanges":"حفظ التغييرات",
+         "addService":"إضافة خدمة",
+         "editService":"تعديل الخدمة",
+         "deleteService":"حذف الخدمة",
+         "deleteSection":"حذف القسم",
+         "editSection":"تعديل القسم",
+         "viewDetails":"عرض التفاصيل",
+         "addAttribute":"إضافة خاصية",
+         "editAttribute":"تعديل الخاصية",
+         "deleteAttribute":"حذف الخاصية",
+         "viewAttribute":"عرض الخاصية"
+ 
+     },
+     "validations": {
+         "email": {
+             "required": "البريد الالكتروني مطلوب!",
+             "invalid": "البريد الالكتروني غير صحيح!"
+         },
+         "password": {
+             "required": "كلمة المرور مطلوبة!",
+             "min": "كلمة المرور يجب أن تكون أطول من {min} أحرف!",
+             "max": "كلمة المرور يجب أن تكون أقل من {max} حرف!"
+         },
+         "newPassword": {
+             "required": "كلمة المرور مطلوبة!",
+             "min": "كلمة المرور يجب أن تكون أطول من {min} أحرف!",
+             "max": "كلمة المرور يجب أن تكون أقل من {max} حرف!"
+         },
+         "otp": {
+             "required": "الكود مطلوب!",
+             "length": "الكود يجب أن يحتوي على 4 أرقام!"
+         },
+         "phoneNumber": {
+             "required": "الهاتف مطلوب!",
+             "invalid": "الهاتف غير صحيح!"
+         },
+         "iconFile": {
+             "required": "الصورة مطلوبة!",
+             "invalid": "الصورة غير صحيحة!"
+         },
+         "name": {
+             "required": "اسم الشبكة الاجتماعية مطلوب!",
+             "min": "اسم الشبكة الاجتماعية يجب أن يكون أطول من {min} أحرف!",
+             "max": "اسم الشبكة الاجتماعية يجب أن يكون أقل من {max} حرف!"
+         },
+         "displayOrder": {
+             "required": "ترتيب العرض مطلوب!",
+             "min": "ترتيب العرض يجب أن يكون أطول من {min} أحرف!",
+             "max": "ترتيب العرض يجب أن يكون أقل من {max} حرف!"
+         },
+         "host": {
+             "required": "Host مطلوب!",
+             "min": "Host يجب أن يكون أطول من {min} أحرف!",
+             "max": "Host يجب أن يكون أقل من {max} حرف!"
+         },
+         "port": {
+             "required": "Port مطلوب!",
+             "min": "Port يجب أن يكون أطول من {min} أحرف!",
+             "max": "Port يجب أن يكون أقل من {max} حرف!"
+         },
+         "useSsl": {
+             "required": "Use SSL مطلوب!",
+             "min": "Use SSL يجب أن يكون أطول من {min} أحرف!",
+             "max": "Use SSL يجب أن يكون أقل من {max} حرف!"
+         },
+         "applicationName": {
+             "required": "اسم التطبيق مطلوب!",
+             "min": "اسم التطبيق يجب أن يكون أطول من {min} أحرف!",
+             "max": "اسم التطبيق يجب أن يكون أقل من {max} حرف!"
+         },
+         "enTitle": {
+             "required": "العنوان باللغة الإنجليزية مطلوب!",
+             "min": "العنوان باللغة الإنجليزية يجب أن يكون أطول من {min} أحرف!",
+             "max": "العنوان باللغة الإنجليزية يجب أن يكون أقل من {max} حرف!"
+         },
+         "arTitle": {
+             "required": "العنوان باللغة العربية مطلوب!",
+             "min": "العنوان باللغة العربية يجب أن يكون أطول من {min} أحرف!",
+             "max": "العنوان باللغة العربية يجب أن يكون أقل من {max} حرف!"
+         },
+         "enDescription": {
+             "required": "الوصف باللغة الإنجليزية مطلوب!",
+             "min": "الوصف باللغة الإنجليزية يجب أن يكون أطول من {min} أحرف!",
+             "max": "الوصف باللغة الإنجليزية يجب أن يكون أقل من {max} حرف!"
+         },
+         "arDescription": {
+             "required": "الوصف باللغة العربية مطلوب!",
+             "min": "الوصف باللغة العربية يجب أن يكون أطول من {min} أحرف!",
+             "max": "الوصف باللغة العربية يجب أن يكون أقل من {max} حرف!"
+         },
+         "sectionId":{
+             "required": "القسم مطلوب!",
+             "min": "القسم يجب أن يكون أطول من {min} أحرف!",
+             "max": "القسم يجب أن يكون أقل من {max} حرف!"
+         },
+         "serviceId":{
+             "required": "اخدمة مطلوب!",
+             "min": "القسم يجب أن يكون أطول من {min} أحرف!",
+             "max": "القسم يجب أن يكون أقل من {max} حرف!"
+         },
+         "arName":{
+             "required": "الاسم بالعربية مطلوب!"
+         },
+         "enName":{
+             "required": "الاسم بالانجليزية مطلوب!"
+         },
+         "value":{
+             "required": "القيمة مطلوبة!"
+         },
+         "arValue":{
+             "required": "القيمة بالعربية مطلوبة!"
+         },
+         "enValue":{
+             "required": "القيمة بالانجليزية مطلوبة!"
+         },
+         "mobileNumber":{
+             "required": "رقم الجوال مطلوب!",
+             "min": "رقم الجوال يجب أن يكون أطول من {min} أحرف!",
+             "max": "رقم الجوال يجب أن يكون أقل من {max} حرف!",
+             "pattern": "رقم الجوال يجب أن يكون رقمًا صحيحًا!"
+         },
+         "currentPassword":{
+             "required": "كلمة المرور الحالية مطلوبة!",
+             "min": "كلمة المرور الحالية يجب أن تكون أطول من {min} أحرف!",
+             "max": "كلمة المرور الحالية يجب أن تكون أقل من {max} حرف!",
+             "pattern": "كلمة المرور الحالية يجب أن تكون رقمًا صحيحًا!"
+         },
+         "fullName":{
+             "required": "الاسم بالكامل مطلوب!",
+             "min": "الاسم بالكامل يجب أن يكون أطول من {min} أحرف!",
+             "max": "الاسم بالكامل يجب أن يكون أقل من {max} حرف!",
+             "pattern": "الاسم بالكامل يجب أن يكون رقمًا صحيحًا!"
+         }
+     },
+     "dialogs": {
+         "logout": {
+             "title": "تسجيل الخروج",
+             "description": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+             "confirm": "نعم، خروج",
+             "cancel": "إلغاء"
+         },
+         "delete": {
+             "title": "حذف",
+             "description": "هل أنت متأكد أنك تريد حذف هذا؟",
+             "confirm": "نعم، حذف",
+             "cancel": "إلغاء"
+         },
+         "addContact": {
+             "title": "إضافة جهة اتصال",
+             "description": "سيتم إضافة جهة اتصال جديدة",
+             "confirm": "نعم، إضافة",
+             "cancel": "إلغاء"
+         },
+         "updateContact": {
+             "title": "تعديل جهة اتصال",
+             "description": "سيتم تعديل جهة اتصال",
+             "confirm": "نعم، تعديل",
+             "cancel": "إلغاء"
+         },
+         "addSocialMedia": {
+             "title": "إضافة وسيلة اتصال",
+             "description": "سيتم إضافة وسيلة اتصال جديدة",
+             "confirm": "نعم، إضافة",
+             "cancel": "إلغاء"
+         },
+         "updateSocialMedia": {
+             "title": "تعديل وسيلة اتصال",
+             "description": "سيتم تعديل وسيلة اتصال",
+             "confirm": "نعم، تعديل",
+             "cancel": "إلغاء"
+         },
+         "deleteSection": {
+             "title": "حذف",
+             "description": "هل أنت متأكد أنك تريد حذف هذا؟",
+             "confirm": "نعم، حذف",
+             "cancel": "إلغاء"
+         }
+     }
+ }
