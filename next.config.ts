@@ -23,7 +23,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "https://apiwebsite.rakiza-sa.com",
+        hostname: "apiwebsite.rakiza-sa.com",
         pathname: "/**",
       },
     ],
