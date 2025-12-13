@@ -22,6 +22,10 @@ import DeleteModal from "@/components/core/modal/DeleteModal";
 import { useRouter } from "next/navigation";
 import { Empty } from "@/components/core/Empty";
 import { Skeleton } from "@/components/ui/skeleton";
+import ImagesModal from "@/components/organisms/sections/ImagesModal";
+import { createImageSchema } from "@/validations/sections";
+import { output } from "zod";
+import useAddImages from "@/services/API/mutations/services/useAddImages";
 
 export default function SectionsPage() {
   const { t, isRtl } = useLocalizer();
@@ -47,9 +51,13 @@ export default function SectionsPage() {
   const [isServiceDetailsOpen, setIsServiceDetailsOpen] = useState(false);
   const [viewingService, setViewingService] = useState<IService | null>(null);
 
+  // Service Images Modal State
+  const [isServiceImagesOpen, setIsServiceImagesOpen] = useState(false);
+
   // Mutations
   const { mutateAsync: createSection, isPending: isCreatingSection } =
     useCreateSection();
+  const { mutateAsync: addImages, isPending: isAddingImages } = useAddImages();
   const { mutateAsync: updateSection, isPending: isUpdatingSection } =
     useUpdateSection();
   const { mutateAsync: deleteSection, isPending: isDeletingSection } =
@@ -170,6 +178,23 @@ export default function SectionsPage() {
     }
   };
 
+  const handleUpdateServiceImages = async (values: any, id: string) => {
+    try {
+      const response = await addImages({ id, body: values });
+      if (response.data?.data?.success) {
+        toast.success(
+          response?.data?.data?.message || "Service updated successfully"
+        );
+        setIsServiceImagesOpen(false);
+        setSelectedService(null);
+      } else {
+        toast.error(response.data?.data?.message || "Failed to update service");
+      }
+    } catch (error: any) {
+      toast.error(error.message || "An error occurred");
+    }
+  };
+
   // Filtering
   const filteredSections = sections?.filter((section) => {
     const query = searchQuery.toLowerCase();
@@ -250,6 +275,10 @@ export default function SectionsPage() {
                   setSelectedService(service);
                   setDeleteServiceModalIsOpen(true);
                 }}
+                onImagesService={(service) => {
+                  setSelectedService(service);
+                  setIsServiceImagesOpen(true);
+                }}
               />
             ))}
       </div>
@@ -309,6 +338,18 @@ export default function SectionsPage() {
         }}
         service={viewingService}
       />
+
+      {selectedService && (
+        <ImagesModal
+          isOpen={isServiceImagesOpen}
+          onClose={() => {
+            setIsServiceImagesOpen(false);
+            setSelectedService(null);
+          }}
+          initialData={selectedService}
+          onSubmit={handleUpdateServiceImages}
+        />
+      )}
     </div>
   );
 }

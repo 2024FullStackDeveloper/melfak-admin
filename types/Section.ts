@@ -16,6 +16,12 @@ export interface IService {
   parentServiceId?: string | null;
   createdAt: string;
   modifiedAt?: string | null;
+  images?: IImage[];
+}
+
+export interface IImage {
+  id: string;
+  imageUrl: string;
 }
 
 export interface ISection {
@@ -27,6 +33,8 @@ export interface ISection {
   unactive: boolean;
   createdAt: string;
   modifiedAt?: string | null;
+  pageCode?: string;
+  orderOnPage?: number;
   services?: IService[];
 }
 

@@ -126,7 +126,7 @@
     @apply box-border border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-none;
   }
 
   h1 {

@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import useLocalizer from "@/hooks/useLocalizer";
 import { IService } from "@/types/Section";
-import { Edit, Eye, MoreVertical, Trash } from "lucide-react";
+import { Edit, Eye, MoreVertical, Trash, ImageIcon } from "lucide-react";
 import Image from "next/image";
 
 interface ServiceItemProps {
@@ -15,6 +15,7 @@ interface ServiceItemProps {
   onView: (service: IService) => void;
   onEdit: (service: IService) => void;
   onDelete: (service: IService) => void;
+  onImages: (service: IService) => void;
 }
 
 export default function ServiceItem({
@@ -22,6 +23,7 @@ export default function ServiceItem({
   onView,
   onEdit,
   onDelete,
+  onImages,
 }: ServiceItemProps) {
   const { isRtl, t } = useLocalizer();
 
@@ -58,6 +60,10 @@ export default function ServiceItem({
           <DropdownMenuItem onClick={() => onView(service)}>
             <Eye className="mr-2 h-4 w-4" />
             {t("buttons.viewDetails")}
+          </DropdownMenuItem>
+          <DropdownMenuItem onClick={() => onImages(service)}>
+            <ImageIcon className="mr-2 h-4 w-4" />
+            {t("buttons.images")}
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => onEdit(service)}>
             <Edit className="mr-2 h-4 w-4" />

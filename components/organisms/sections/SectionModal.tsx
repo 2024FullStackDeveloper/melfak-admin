@@ -1,3 +1,4 @@
+import Select from "@/components/core/select/Select";
 import SwitchBox from "@/components/core/SwitchBox";
 import TextAreaInput from "@/components/core/TextAreaInput";
 import TextInput from "@/components/core/TextInput";
@@ -17,11 +18,12 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import useLocalizer from "@/hooks/useLocalizer";
+import useGetPages from "@/services/API/fetching/pages/useGetPages";
 import { ISection } from "@/types/Section";
 import { createSectionSchema } from "@/validations/sections";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FileText } from "lucide-react";
-import { useEffect } from "react";
+import { FileText, Hash, ListOrderedIcon } from "lucide-react";
+import { useEffect, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -40,8 +42,18 @@ export default function SectionModal({
   initialData,
   isLoading,
 }: SectionModalProps) {
-  const { t } = useLocalizer();
+  const { t, isRtl } = useLocalizer();
   const schema = createSectionSchema(t);
+  const { data: pages, isLoading: pagesLoading } = useGetPages();
+
+  const pagesOptions = useMemo(() => {
+    return (
+      pages?.map((page) => ({
+        value: page.code,
+        label: isRtl ? page.arName : page.enName,
+      })) || []
+    );
+  }, [pages]);
 
   const form = useForm<z.infer<typeof schema>>({
     resolver: zodResolver(schema),
@@ -51,6 +63,8 @@ export default function SectionModal({
       arDescription: "",
       enDescription: "",
       unactive: false,
+      pageCode: "",
+      orderOnPage: 0,
     },
   });
 
@@ -62,6 +76,8 @@ export default function SectionModal({
         arDescription: initialData?.arDescription ?? "",
         enDescription: initialData?.enDescription ?? "",
         unactive: initialData?.unactive,
+        pageCode: initialData?.pageCode,
+        orderOnPage: initialData?.orderOnPage,
       });
     } else {
       form.reset({
@@ -70,6 +86,8 @@ export default function SectionModal({
         arDescription: "",
         enDescription: "",
         unactive: false,
+        pageCode: "",
+        orderOnPage: 0,
       });
     }
   }, [initialData, isOpen, form]);
@@ -93,6 +111,51 @@ export default function SectionModal({
             className="space-y-6"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="pageCode"
+                render={({ field, fieldState }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Select
+                        label={t("labels.pageCode")}
+                        placeholder={t("placeholders.pageCode")}
+                        value={field.value}
+                        disabled={pagesLoading}
+                        options={pagesOptions}
+                        onChange={field.onChange}
+                        error={fieldState.invalid}
+                        noOptionsMessage={fieldState.error?.message}
+                        id="pageCode"
+                        isRequired
+                      />
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="orderOnPage"
+                render={({ field, fieldState }) => (
+                  <FormItem>
+                    <FormControl>
+                      <TextInput
+                        type="number"
+                        min={1}
+                        required
+                        label={t("labels.orderOnPage")}
+                        placeholder={t("placeholders.orderOnPage")}
+                        icon={Hash}
+                        value={field.value ?? 0}
+                        onChange={(e) => field.onChange(Number(e.target.value))}
+                        error={fieldState.error?.message}
+                      />
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+
               <FormField
                 control={form.control}
                 name="arTitle"

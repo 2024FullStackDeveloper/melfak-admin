@@ -13,6 +13,8 @@ import {
   Share2,
   ShoppingBag,
   Megaphone,
+  ListCollapse,
+  MailsIcon,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -42,6 +44,12 @@ const navigationItems: NavigationItem[] = [
     icon: LayoutDashboard,
   },
   {
+    title: "pages.lists",
+    href: "/dashboard/lists",
+    icon: ListCollapse,
+    soon: true,
+  },
+  {
     title: "pages.sections",
     href: "/dashboard/sections",
     icon: ShoppingBag,
@@ -60,6 +68,12 @@ const navigationItems: NavigationItem[] = [
     title: "pages.news",
     href: "/dashboard/news",
     icon: Megaphone,
+    soon: true,
+  },
+  {
+    title: "pages.messages",
+    href: "/dashboard/messages",
+    icon: MailsIcon,
     soon: true,
   },
   {
@@ -213,7 +227,7 @@ export function Sidebar({
   return (
     <aside
       className={cn(
-        "fixed top-0 z-30 flex h-screen flex-col border-border bg-card transition-all duration-300 ease-in-out",
+        "fixed top-0 z-30 flex h-screen flex-col border-border bg-card ",
         rtl ? "right-0 border-l" : "left-0 border-r",
         collapsed ? "w-20" : "w-72",
         className

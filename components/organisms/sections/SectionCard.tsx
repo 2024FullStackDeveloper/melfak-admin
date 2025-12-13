@@ -19,6 +19,7 @@ interface SectionCardProps {
   onViewService: (service: IService) => void;
   onEditService: (service: IService) => void;
   onDeleteService: (service: IService) => void;
+  onImagesService: (service: IService) => void;
 }
 
 export default function SectionCard({
@@ -29,6 +30,7 @@ export default function SectionCard({
   onViewService,
   onEditService,
   onDeleteService,
+  onImagesService,
 }: SectionCardProps) {
   const { isRtl, t } = useLocalizer();
 
@@ -79,6 +81,7 @@ export default function SectionCard({
                 onView={onViewService}
                 onEdit={onEditService}
                 onDelete={onDeleteService}
+                onImages={onImagesService}
               />
             ))}
           </div>

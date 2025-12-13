@@ -63,6 +63,7 @@ export function DashboardHeader({
       .finally(() => {
         logout();
         setIsLogoutDialogOpen(false);
+        router.replace("/");
       });
   }, []);
 

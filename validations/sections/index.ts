@@ -14,6 +14,12 @@ export const createSectionSchema = (
     arDescription: z.string().optional(),
     enDescription: z.string().optional(),
     unactive: z.boolean(),
+    pageCode: z
+      .string(t("validations.pageCode.required"))
+      .min(1, t("validations.pageCode.required")),
+    orderOnPage: z
+      .number(t("validations.orderOnPage.required"))
+      .min(1, t("validations.orderOnPage.required")),
   });
 
 export type sectionSchema = ReturnType<typeof createSectionSchema>;
@@ -116,3 +122,12 @@ export const createServiceItemSchema = (
   });
 
 export type serviceItemSchema = ReturnType<typeof createServiceItemSchema>;
+
+export const createImageSchema = (
+  t: (key: string, values?: Record<string, any>) => string
+) =>
+  z.object({
+    images: imageSchema,
+  });
+
+export type imageSchema = ReturnType<typeof createImageSchema>;

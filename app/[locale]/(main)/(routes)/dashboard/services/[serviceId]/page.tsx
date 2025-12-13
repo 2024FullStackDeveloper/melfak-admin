@@ -7,6 +7,11 @@ import TextInput from "@/components/core/TextInput";
 import ServiceItemCard from "@/components/organisms/serviceItems/ServiceItemCard";
 import ServiceItemModal from "@/components/organisms/serviceItems/ServiceItemModal";
 import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 import useLocalizer from "@/hooks/useLocalizer";
@@ -355,6 +360,31 @@ export default function ServiceItemsPage() {
                 </p>
               </div>
             </div>
+            <Separator />
+            {serviceDetails?.images && serviceDetails?.images?.length > 0 && (
+              <div dir="ltr">
+                <Carousel>
+                  <CarouselContent>
+                    {serviceDetails?.images?.map((image, index) => (
+                      <CarouselItem
+                        key={index}
+                        className="basis-1/2 lg:basis-1/3 xl:basis-1/4"
+                      >
+                        <div className="relative h-[150px] ">
+                          <Image
+                            src={image.imageUrl}
+                            alt="service image"
+                            fill
+                            loading="lazy"
+                            className="object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                </Carousel>
+              </div>
+            )}
           </div>
         )}
       </div>
