@@ -55,7 +55,7 @@ function SheetContent({
   return (
     <SheetPortal>
       <SheetOverlay />
-      <SheetTrigger />
+      <SheetTrigger data-slot="sheet-trigger" />
       <SheetPrimitive.Content
         data-slot="sheet-content"
         className={cn(

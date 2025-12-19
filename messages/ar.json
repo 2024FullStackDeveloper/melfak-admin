@@ -134,7 +134,8 @@
          "currentPassword":"كلمة المرور الحالية",
          "orderOnPage":"ترتيب العرض على الصفحة",
          "pageCode":"كود الصفحة",
-         "image":"الصورة"
+         "image":"الصورة",
+         "url":"الرابط"
          },
      "placeholders":{
          "flexableSearch":"إبحث عن اي قسم او عنصر من هنا ...",
@@ -198,7 +199,8 @@
          "mobileNumber":"رقم الجوال",
          "pageCode":"كود الصفحة",
          "orderOnPage":"ترتيب العرض على الصفحة",
-         "image":"الصورة"
+         "image":"الصورة",
+         "url":"ادخل الرابط"
      }, 
      "pages":{
          "dashboard":"الرئيسية",

@@ -129,7 +129,8 @@
         "currentPassword":"Current Password",
         "pageCode":"Page Code",
         "orderOnPage":"Order On Page",
-        "image":"Image"
+        "image":"Image",
+        "url":"Url"
     },
     "placeholders":{
         "flexableSearch":"Search for any section or item here...",
@@ -193,7 +194,8 @@
         "fullName":"Enter full name",
         "pageCode":"Enter page code",
         "orderOnPage":"Enter order on page",
-        "image":"Image"
+        "image":"Image",
+        "url":"Enter url"
 
 
     },

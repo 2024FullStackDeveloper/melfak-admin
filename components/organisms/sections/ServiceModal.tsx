@@ -102,10 +102,8 @@ export default function ServiceModal({
     if (initialData) {
       onEdit(submissionValues, initialData.id);
     } else {
-      if (form.getValues("thumbnailFile")) {
-        onAdd(submissionValues);
-        onClose();
-      }
+      onAdd(submissionValues);
+      onClose();
     }
   };
 
@@ -269,8 +267,7 @@ export default function ServiceModal({
                   <FormItem>
                     <FormControl>
                       <ImageInput
-                        required
-                        src={initialData?.thumbnailUrl}
+                        src={initialData?.thumbnailUrl ?? ""}
                         label={t("labels.thumbnailFile")}
                         placeholder={t("placeholders.thumbnailFile")}
                         value={field.value ? [field.value] : []}

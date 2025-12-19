@@ -144,6 +144,7 @@ export default function SectionModal({
                         type="number"
                         min={1}
                         required
+                        disabled
                         label={t("labels.orderOnPage")}
                         placeholder={t("placeholders.orderOnPage")}
                         icon={Hash}

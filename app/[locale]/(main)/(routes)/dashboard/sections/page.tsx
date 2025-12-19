@@ -220,7 +220,7 @@ export default function SectionsPage() {
             {t("paragraphs.sectionsAndServices")}
           </p>
         </div>
-        <Button onClick={() => setIsSectionModalOpen(true)}>
+        <Button disabled onClick={() => setIsSectionModalOpen(true)}>
           <Plus className="mr-2 h-4 w-4" />
           {t("buttons.add")}
         </Button>

@@ -11,7 +11,7 @@ import { ApiResponse } from "@/services/API";
 import useAddSocialMedia from "@/services/API/mutations/socialMedias/useAddSocialMedia";
 import { createSocialMediaSchema } from "@/validations/socialMedia";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ListOrdered, Share } from "lucide-react";
+import { Link2, ListOrdered, Share } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import z from "zod";
@@ -101,9 +101,9 @@ const AddContactModal: React.FC<AddContactModalProps> = ({
                   <FormControl>
                     <TextInput
                       required
-                      label={t("labels.name")}
-                      placeholder={t("placeholders.name")}
-                      icon={Share}
+                      label={t("labels.url")}
+                      placeholder={t("placeholders.url")}
+                      icon={Link2}
                       {...field}
                       error={fieldState?.error?.message}
                     />

@@ -41,7 +41,7 @@ export const createServiceSchema = (
     enSubTitle: z.string().optional(),
     arDescription: z.string().optional(),
     enDescription: z.string().optional(),
-    thumbnailFile: imageSchema,
+    thumbnailFile: imageSchema.nullable().optional(),
     imageFile: imageSchema.nullable().optional(),
     unactive: z.boolean(),
     order: z.number(),

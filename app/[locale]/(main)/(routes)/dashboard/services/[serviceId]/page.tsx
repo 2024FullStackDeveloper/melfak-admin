@@ -200,14 +200,9 @@ export default function ServiceItemsPage() {
               <Skeleton className="h-6 w-20" />
             ) : (
               <h1 className="text-3xl font-bold tracking-tight">
-                {isRtl
-                  ? parentServiceDetails?.arTitle
-                  : parentServiceDetails?.enTitle}
+                {isRtl ? serviceDetails?.arTitle : serviceDetails?.enTitle}
               </h1>
             )}
-            <h1 className="text-3xl font-bold tracking-tight">
-              {isRtl ? serviceDetails?.arTitle : serviceDetails?.enTitle}
-            </h1>
           </div>
         </div>
         <Button onClick={() => setIsServiceItemModalOpen(true)}>
@@ -224,7 +219,7 @@ export default function ServiceItemsPage() {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
       </div>
-      <div className="w-full rounded-lg shadow-sm border border-secondary bg-card p-6 min-h-[320px] flex flex-col lg:flex-row gap-6">
+      <div className="w-full rounded-lg shadow-sm overflow-hidden border border-secondary bg-card p-6 min-h-[320px] flex flex-col lg:flex-row gap-6">
         <div className="flex flex-col gap-2">
           <p className="text-sm font-medium mb-2">{t("labels.thumbnailUrl")}</p>
           {serviceItemsLoading ? (
@@ -257,33 +252,33 @@ export default function ServiceItemsPage() {
         {serviceItemsLoading ? (
           <Skeleton className="flex-1 flex flex-col gap-2 min-h-full border  p-6 rounded-lg" />
         ) : (
-          <div className="flex-1 flex flex-col gap-2 min-h-full border  p-6 rounded-lg">
+          <div className="flex-1 flex flex-col gap-2 min-h-full border  p-6 rounded-lg overflow-hidden">
             <div className="flex flex-col">
               <p
                 className={cn(
-                  "text-sm md:text-lg font-medium mb-2 px-2 border-accent",
+                  "text-sm md:text-lg font-medium mb-2 px-2 border-accent line-clamp-2",
                   isRtl ? "border-r-2" : "border-l-2"
                 )}
               >
                 {isRtl ? t("labels.arSubTitle") : t("labels.enSubTitle")}
               </p>
-              <p className="text-sm truncate mx-3">
+              <p className="text-sm  mx-3 line-clamp-3">
                 {(isRtl
                   ? serviceDetails?.arSubTitle
-                  : serviceDetails?.arSubTitle) ??
+                  : serviceDetails?.enSubTitle) ??
                   t("placeholders.noDescription")}
               </p>
             </div>
             <div className="flex flex-col">
               <p
                 className={cn(
-                  "text-sm md:text-lg font-medium mb-2 px-2 border-accent",
+                  "text-sm md:text-lg font-medium mb-2 px-2 border-accent line-clamp-3",
                   isRtl ? "border-r-2" : "border-l-2"
                 )}
               >
                 {isRtl ? t("labels.arDescription") : t("labels.enDescription")}
               </p>
-              <p className="text-sm  truncate mx-3">
+              <p className="text-sm  mx-3 line-clamp-3">
                 {(isRtl
                   ? serviceDetails?.arDescription
                   : serviceDetails?.enDescription) ??

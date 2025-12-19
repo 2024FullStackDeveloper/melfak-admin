@@ -28,22 +28,25 @@ export default function ServiceItem({
   const { isRtl, t } = useLocalizer();
 
   return (
-    <div className="flex items-center justify-between p-4 border rounded-lg bg-card hover:bg-accent/50 transition-colors cursor-pointer">
+    <div className="flex flex-row items-center justify-between p-4 border rounded-lg bg-card mb-4">
       <div className="flex items-center gap-4">
-        <div className="relative h-12 w-12 overflow-hidden rounded-md border">
+        <div className="relative h-12 w-12 rounded-md border">
           <Image
-            src={service.thumbnailUrl}
+            src={service.thumbnailUrl || "/images/default.png"}
             alt={isRtl ? service.arTitle : service.enTitle}
             fill
             className="object-cover"
           />
         </div>
-        <div>
-          <h4 className="font-medium">
+        <div className=" flex-1">
+          <h4
+            className="font-medium line-clamp-1"
+            title={isRtl ? service.arTitle : service.enTitle}
+          >
             {isRtl ? service.arTitle : service.enTitle}
           </h4>
           {(service.arSubTitle || service.enSubTitle) && (
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground line-clamp-2">
               {isRtl ? service.arSubTitle : service.enSubTitle}
             </p>
           )}

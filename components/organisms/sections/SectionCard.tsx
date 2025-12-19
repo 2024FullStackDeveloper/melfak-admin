@@ -10,6 +10,7 @@ import useLocalizer from "@/hooks/useLocalizer";
 import { ISection, IService } from "@/types/Section";
 import { Edit, MoreVertical, Plus, Trash } from "lucide-react";
 import ServiceItem from "./ServiceItem";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface SectionCardProps {
   section: ISection;
@@ -61,6 +62,7 @@ export default function SectionCard({
                 {t("buttons.editSection")}
               </DropdownMenuItem>
               <DropdownMenuItem
+                disabled
                 className="text-destructive focus:text-destructive"
                 onClick={() => onDeleteSection(section.id)}
               >
@@ -73,7 +75,7 @@ export default function SectionCard({
       </CardHeader>
       <CardContent>
         {section.services && section.services.length > 0 ? (
-          <div className="space-y-4 pt-4">
+          <ScrollArea className="space-y-4 pt-4 h-[280px]">
             {section.services.map((service) => (
               <ServiceItem
                 key={service.id}
@@ -84,7 +86,7 @@ export default function SectionCard({
                 onImages={onImagesService}
               />
             ))}
-          </div>
+          </ScrollArea>
         ) : (
           <div className="py-6 text-center text-muted-foreground">
             {t("paragraphs.noServicesFound")}
