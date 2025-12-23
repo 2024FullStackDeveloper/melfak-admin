@@ -121,7 +121,7 @@ export default function SectionModal({
                         label={t("labels.pageCode")}
                         placeholder={t("placeholders.pageCode")}
                         value={field.value}
-                        disabled={pagesLoading}
+                        disabled={true}
                         options={pagesOptions}
                         onChange={field.onChange}
                         error={fieldState.invalid}
