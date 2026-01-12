@@ -15,7 +15,7 @@ import useCreateService from "@/services/API/mutations/services/useCreateService
 import useDeleteService from "@/services/API/mutations/services/useDeleteService";
 import useUpdateService from "@/services/API/mutations/services/useUpdateService";
 import { ISection, IService } from "@/types/Section";
-import { Plus, Search, SearchIcon } from "lucide-react";
+import { Plus, SearchIcon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import DeleteModal from "@/components/core/modal/DeleteModal";
@@ -23,12 +23,10 @@ import { useRouter } from "next/navigation";
 import { Empty } from "@/components/core/Empty";
 import { Skeleton } from "@/components/ui/skeleton";
 import ImagesModal from "@/components/organisms/sections/ImagesModal";
-import { createImageSchema } from "@/validations/sections";
-import { output } from "zod";
 import useAddImages from "@/services/API/mutations/services/useAddImages";
 
 export default function SectionsPage() {
-  const { t, isRtl } = useLocalizer();
+  const { t } = useLocalizer();
   const { data: sections, isLoading } = useGetSections();
   const [searchQuery, setSearchQuery] = useState("");
   const router = useRouter();
@@ -57,7 +55,7 @@ export default function SectionsPage() {
   // Mutations
   const { mutateAsync: createSection, isPending: isCreatingSection } =
     useCreateSection();
-  const { mutateAsync: addImages, isPending: isAddingImages } = useAddImages();
+  const { mutateAsync: addImages } = useAddImages();
   const { mutateAsync: updateSection, isPending: isUpdatingSection } =
     useUpdateSection();
   const { mutateAsync: deleteSection, isPending: isDeletingSection } =

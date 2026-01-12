@@ -2,49 +2,37 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  User,
   Mail,
-  Phone,
   Calendar,
   Clock,
   LogIn,
   LogOut,
   Sparkles,
-  User2,
   UserSquare,
   PhoneCall,
-  X,
-  Save,
   Lock,
 } from "lucide-react";
-import KeyValueBox from "@/components/core/KeyValueBox";
 import useLocalizer from "@/hooks/useLocalizer";
-import { Separator } from "@/components/ui/separator";
 import useAuthState from "@/services/zustand/authState";
-import ActiveBudge from "@/components/core/ActiveBudge";
 import dateFormat from "dateformat";
-import DisplayInput from "@/components/core/DisplayInput";
-import DecorationBox from "@/components/DecorationBox";
 import { useForm } from "react-hook-form";
 import {
   createUpdateUserPassword,
   createUpdateUserProfile,
 } from "@/validations/auth";
-import { TranslationValues } from "next-intl";
 import useUpdateProfile from "@/services/API/mutations/user/useUpdateProfile";
 import useUpdatePassword from "@/services/API/mutations/user/useUpdatePassword";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import TextInput from "@/components/core/TextInput";
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import { toast } from "sonner";
 import { ApiResponse } from "@/services/API";
 
 export default function ProfilePage() {
-  const { t, isRtl } = useLocalizer();
+  const { t } = useLocalizer();
   const { user, setUser } = useAuthState();
 
   const updateProfileInfoSchema = createUpdateUserProfile(t);

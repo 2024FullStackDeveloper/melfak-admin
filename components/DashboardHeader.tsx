@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Menu, Bell, User } from "lucide-react";
+import { Menu, User } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import useLocalizer from "@/hooks/useLocalizer";
@@ -21,7 +21,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 
 import { useCallback, useState } from "react";
@@ -43,9 +42,6 @@ export function DashboardHeader({
   const { logout } = useAuthState();
   const [isLogoutDialogOpen, setIsLogoutDialogOpen] = useState(false);
   const router = useRouter();
-  const pathname = usePathname();
-
-  //const paths = pathname.split("/").filter((path) => path);
 
   const handleSignOut = useCallback(() => {
     setIsLogoutDialogOpen(true);
@@ -65,7 +61,7 @@ export function DashboardHeader({
         setIsLogoutDialogOpen(false);
         router.replace("/");
       });
-  }, []);
+  }, [logout, logoutMutation, router]);
 
   return (
     <header

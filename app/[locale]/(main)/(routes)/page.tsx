@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -42,11 +42,11 @@ import { useRouter } from "@/i18n/routing";
 
 type Step = "login" | "forgot-email" | "forgot-otp";
 
-const otpSchema = z.object({
-  otp: z.string().min(4, {
-    message: "Please enter the 4-digit code.",
-  }),
-});
+// const otpSchema = z.object({
+//   otp: z.string().min(4, {
+//     message: "Please enter the 4-digit code.",
+//   }),
+// });
 
 const resetSchema = z
   .object({
@@ -88,7 +88,7 @@ export default function SignInPage() {
           toast.error(message);
         }
       })
-      .catch((err) => {
+      .catch(() => {
         loginForm?.setError("password", {
           message: "كلمة المرور غير صحيحة !",
         });

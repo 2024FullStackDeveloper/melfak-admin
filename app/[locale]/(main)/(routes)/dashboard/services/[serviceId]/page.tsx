@@ -228,13 +228,13 @@ export default function ServiceItemsPage() {
             <div className="relative rounded-lg shadow-sm w-52 h-52 border border-secondary flex items-center justify-center bg-muted">
               {serviceDetails?.thumbnailUrl ? (
                 <Image
-                  preload
                   fill
                   fetchPriority="auto"
                   src={serviceDetails.thumbnailUrl}
                   alt={
                     isRtl ? serviceDetails?.arTitle : serviceDetails?.enTitle
                   }
+                  priority
                   className="rounded-lg object-cover"
                 />
               ) : (

@@ -10,7 +10,6 @@ import { Toaster } from "@/components/ui/sonner";
 import { ReactQueryProvider } from "@/components/providers/ReactQueryProvider";
 import OverlayShow from "@/components/OverlayShow";
 import { AuthProvider } from "@/components/providers/AuthProvider";
-import Footer from "@/components/core/Footer";
 
 const tajwal = localFont({
   src: [

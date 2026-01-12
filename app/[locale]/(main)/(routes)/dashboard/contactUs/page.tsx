@@ -1,18 +1,6 @@
 "use client";
 import { IContact } from "@/types/Contact";
-import {
-  PhoneCall,
-  Edit2,
-  DeleteIcon,
-  Trash2,
-  Edit3,
-  Plus,
-  SearchIcon,
-} from "lucide-react";
-import Container from "@/components/core/template/container/Container";
-import { Table } from "@/components/core/table/Table";
-import Content from "@/components/core/template/content/Content";
-import Col from "@/components/core/template/col/Col";
+import { Trash2, Edit3, Plus, SearchIcon } from "lucide-react";
 import TextInput from "@/components/core/TextInput";
 import { TableColumn } from "react-data-table-component/dist/DataTable/types";
 import ActionButtons from "@/components/core/table/components/ActionButtons";
@@ -42,7 +30,6 @@ export default function ContactsPage() {
   const [selectedContact, setSelectedContact] = useState<IContact | null>(null);
   const [updateContactModalIsOpen, setUpdateContactModalIsOpen] =
     useState(false);
-  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleDeleteContact = useCallback(async () => {
@@ -66,69 +53,7 @@ export default function ContactsPage() {
       });
   }, [selectedContact]);
 
-  const columns: TableColumn<IContact>[] = [
-    {
-      name: t("labels.icon"),
-      cell: (row) => (
-        <ImageViewer
-          src={row.iconUrl}
-          alt={row.phoneNumber}
-          className={"w-10 h-10 rounded-lg"}
-        />
-      ),
-      width: "200px",
-    },
-    {
-      name: t("labels.phone"),
-      selector: (row) => row.phoneNumber,
-      width: "200px",
-    },
-    {
-      name: t("labels.isPrimary"),
-      cell: (row) => <ActiveBudge isActive={row.isPrimary} />,
-      width: "200px",
-    },
-    {
-      name: t("labels.unactive"),
-      cell: (row) => <ActiveBudge isActive={row.unactive} />,
-      width: "200px",
-    },
-    {
-      name: t("labels.actions"),
-      width: "200px",
-      cell: (row) => {
-        const actions = [
-          {
-            icon: Edit3,
-            iconClassName: "text-white",
-            onPress: () => {
-              setSelectedContact(row);
-              setUpdateContactModalIsOpen(true);
-            },
-            bgColor: "bg-warning hover:bg-warning/50",
-            label: t("buttons.edit"),
-          },
-          {
-            icon: Trash2,
-            iconClassName: "text-white",
-            onPress: () => {
-              setSelectedContact(row);
-              setDeleteContactModalIsOpen(true);
-            },
-            bgColor: "bg-danger hover:bg-danger/50 ",
-            label: t("buttons.delete"),
-          },
-        ];
-        return <ActionButtons row={row} actions={actions} />;
-      },
-    },
-  ];
-  const {
-    data: contacts = [],
-    isLoading,
-    isFetching,
-    isRefetching,
-  } = useGetContacts();
+  const { data: contacts = [], isLoading } = useGetContacts();
 
   // Filtering
   const filteredContacts = contacts?.filter((contact) => {

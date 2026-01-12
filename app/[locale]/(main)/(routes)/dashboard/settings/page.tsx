@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useEffectEvent, useState } from "react";
+import { useEffect, useEffectEvent } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -12,21 +12,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
-} from "@/components/ui/form";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import {
   Settings,
   Save,
@@ -53,11 +39,11 @@ export default function SettingsPage() {
 
   const schema = updateSettingsSchema(t);
 
-  const resetForm = useEffectEvent(() => {
+  const resetForm = () => {
     form.reset(settings ?? undefined);
-  });
+  };
 
-  const { data: settings, isLoading } = useGetSettings();
+  const { data: settings } = useGetSettings();
   const form = useForm<z.infer<typeof schema>>({
     resolver: zodResolver(schema),
   });

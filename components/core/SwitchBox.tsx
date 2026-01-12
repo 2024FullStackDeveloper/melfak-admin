@@ -26,14 +26,12 @@ const SwitchBox: React.FC<SwitchBoxProps> = ({
         {label && (
           <Label className={cn("text-base", labelClassName)}>{label}</Label>
         )}
-        <Activity mode={subTitle ? "visible" : "hidden"}>
+        {subTitle && (
           <p className={cn("text-sm text-muted-foreground", subTitleClassName)}>
             {subTitle}
           </p>
-        </Activity>
-        <Activity mode={error ? "visible" : "hidden"}>
-          <p className="text-destructive text-sm mt-1">{error}</p>
-        </Activity>
+        )}
+        {error && <p className="text-destructive text-sm mt-1">{error}</p>}
       </div>
       <Switch {...props} />
     </div>

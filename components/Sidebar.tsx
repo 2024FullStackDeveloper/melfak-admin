@@ -16,11 +16,10 @@ import {
   ListCollapse,
   MailsIcon,
 } from "lucide-react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import useLocalizer from "@/hooks/useLocalizer";
 import Image from "next/image";
-import { useTheme } from "next-themes";
+import { Link } from "@/i18n/routing";
 
 interface SidebarProps {
   collapsed: boolean;
@@ -246,7 +245,7 @@ export function Sidebar({
               src={"/images/logo-black.png"}
               alt={"logo"}
               fill
-              preload={true}
+              priority
               className="object-contain"
             />
           </div>

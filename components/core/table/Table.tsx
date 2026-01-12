@@ -10,7 +10,6 @@ import Col from "../template/col/Col";
 import TableSubHeader from "./components/TableSubHeader";
 import Row from "../template/row/Row";
 import { ArrowLeftIcon, ArrowRightIcon, InfoIcon } from "lucide-react";
-import LoadingLogo from "../spinnerLogo/LoadingLogo";
 import colors from "../fonts";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/contexts/themeContext";
