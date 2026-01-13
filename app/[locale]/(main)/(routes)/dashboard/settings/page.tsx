@@ -364,9 +364,12 @@ export default function SettingsPage() {
                           label={t("labels.port")}
                           placeholder={t("placeholders.port")}
                           icon={Cloud}
+                          type="number"
                           required
                           value={field.value ?? ""}
-                          onChange={(e) => field.onChange(e.target.value)}
+                          onChange={(e) =>
+                            field.onChange(Number(e.target.value))
+                          }
                           error={fieldState?.error?.message}
                         />
                       </FormControl>

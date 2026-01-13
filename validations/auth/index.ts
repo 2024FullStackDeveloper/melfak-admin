@@ -25,7 +25,7 @@ export const createSignInSchema = (
 const signInSchema = z.object({
   email: z
     .string({ message: "البريد الالكتروني مطلوب!" })
-    .min(1, { message: "البريد الالكتروني مطلوب!" })
+    .min(1, { message: "البريد الالكتروني مطلوب!" })  
     .email({
       message: "البريد الالكتروني غير صحيح!",
     }),
