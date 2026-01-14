@@ -5,7 +5,6 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: "standalone",
-  trailingSlash: true,
   env: {
     LOCALE: "NEXT_LOCALE",
   },

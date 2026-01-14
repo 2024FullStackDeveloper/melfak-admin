@@ -1,14 +1,13 @@
-// server.js
-const express = require('express');
-const next = require('next');
+const { createServer } = require("http");
+const next = require("next");
 
-const dev = false; // production
+const port = parseInt(process.env.PORT || "3000", 10);
+const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
-const port = process.env.PORT || 3000;
 
 app.prepare().then(() => {
-  const server = express();
-  server.all('*', (req, res) => handle(req, res));
-  server.listen(port, () => console.log(`Ready on ${port}`));
+  createServer((req, res) => handle(req, res)).listen(port, () => {
+    console.log("Ready on port", port);
+  });
 });
